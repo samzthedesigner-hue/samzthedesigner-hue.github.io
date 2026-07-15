@@ -1,7 +1,7 @@
-import { WebWorkerMLCEngine } from "@mlc-ai/web-llm/lib/worker";
+import { Worker } from "@mlc-ai/web-llm";
 
-const engine = new WebWorkerMLCEngine();
+const engine = new Worker();
 
-self.onmessage = (event) => {
-  engine.onmessage(event);
+self.onmessage = (msg) => {
+  engine.onmessage(msg);
 };
